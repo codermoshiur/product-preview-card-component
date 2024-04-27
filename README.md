@@ -1,4 +1,4 @@
-# Frontend Mentor - Challange name
+# Frontend Mentor - Product preview card component
 
 ## Overview
 
@@ -6,11 +6,11 @@
 
 #### Desktop
 
-![](Screenshot)
+![](./design/desktop-design.png)
 
 #### Mobile
 
-![](Screenshot)
+![](./design/mobile-design.png)
 
 ### Links
 
@@ -23,6 +23,7 @@
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS Flexbox
 - CSS Grid
 - Mobile-first workflow
 

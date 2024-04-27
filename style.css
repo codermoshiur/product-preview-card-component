@@ -1,9 +1,192 @@
+/*
+fonts
+*/
+@font-face {
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
+  font-family: Montserrat-Medium;
+}
+@font-face {
+  src: url("./assets/fonts/Montserrat-Bold.ttf");
+  font-family: Montserrat-Bold;
+}
+@font-face {
+  src: url("./assets/fonts/Fraunces_9pt-Bold.ttf");
+  font-family: Fraunces-Bold;
+}
+/*
+css reset
+*/
+:root {
+  /* colors */
+  --color-dark-cyan: hsl(158, 36%, 37%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-deep-aquamarine: hsl(158, 42%, 18%);
+  --color-white: hsl(0, 0%, 100%);
+  /* font-family */
+  --font-primary: "Montserrat-Medium", sans-serif;
+  --font-secondary: "Fraunces-Bold", serif;
+  --font-tertiary: "Montserrat-Bold", sans-serif;
+  /* font-size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-md: 0.875rem;
+  --font-size-lg: 2rem;
+  /* padding */
+  --padding-size-sm: 1rem;
+  --padding-size-md: 1.5rem;
+  --padding-size-lg: 2rem;
+  /* border-radius */
+  --border-radius-xs: 0.5rem;
+  --border-radius-sm: 0.625rem;
+  /* letter-spacing */
+  --letter-spacing-lg: 0.3125rem;
+  /* margin */
+  --margin-xs: 0.75rem;
+  --margin-sm: 1rem;
+  --margin-md: 1.5rem;
+  /* gap */
+  --gap-xs: 0.75rem;
+  --gap-sm: 1.1875rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 
+end css reset 
+*/
+main {
+  background-color: var(--color-cream);
+  padding: var(--padding-size-lg) var(--padding-size-sm);
+}
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+}
+.card-img-top {
+  border-top-left-radius: var(--border-radius-sm);
+  border-top-right-radius: var(--border-radius-sm);
+  width: 100%;
+}
+.card-body {
+  padding: var(--padding-size-md);
+}
+.card-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-dark-grayish-blue);
+  letter-spacing: var(--letter-spacing-lg);
+  margin-bottom: var(--margin-xs);
+}
+.card-title {
+  color: var(--color-very-dark-blue);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  margin-bottom: var(--margin-sm);
+}
+.card-text {
+  color: var(--color-dark-grayish-blue);
+}
+.product-price {
+  margin-top: var(--margin-md);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin-bottom: var(--margin-sm);
+  flex-wrap: wrap;
+}
+.sale-price {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-lg);
+  color: var(--color-dark-cyan);
+}
+.regular-price {
+  color: var(--color-dark-grayish-blue);
+  text-decoration: line-through;
+}
+.button:link,
+.button:visited {
+  font-family: var(--font-tertiary);
+  background-color: var(--color-dark-cyan);
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-xs);
+  border-radius: var(--border-radius-xs);
+  padding: var(--padding-size-sm) 0;
+  align-items: center;
+}
+.button:hover,
+.button:active {
+  background-color: var(--color-deep-aquamarine);
+}
+footer {
+  padding: var(--padding-size-md);
+}
 .attribution {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-dark-grayish-blue);
 }
-
 .attribution a {
-  color: #000;
-  font-weight: 500;
+  color: var(--color-dark-cyan);
+}
+@media screen and (min-width: 30.0625rem) and (max-width: 47.9375rem) {
+  .card {
+    max-width: 37.5rem;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 48rem) {
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  .card {
+    max-width: 37.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .card-img-top {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius-sm);
+  }
 }
