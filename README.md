@@ -14,7 +14,7 @@
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/product-preview-card-component-mobilefirst-solution-S_6eJqz7fi](https://www.frontendmentor.io/solutions/product-preview-card-component-mobilefirst-solution-S_6eJqz7fi)
 - Live Site URL: [https://codermoshiur.github.io/product-preview-card-component/](https://codermoshiur.github.io/product-preview-card-component/)
 
 ## My process
