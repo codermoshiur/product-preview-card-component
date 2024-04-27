@@ -29,26 +29,26 @@ css reset
   --font-secondary: "Fraunces-Bold", serif;
   --font-tertiary: "Montserrat-Bold", sans-serif;
   /* font-size */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.8125rem;
-  --font-size-md: 0.875rem;
-  --font-size-lg: 2rem;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 32px;
   /* padding */
-  --padding-size-sm: 1rem;
-  --padding-size-md: 1.5rem;
-  --padding-size-lg: 2rem;
+  --padding-size-sm: 16px;
+  --padding-size-md: 24px;
+  --padding-size-lg: 32px;
   /* border-radius */
-  --border-radius-xs: 0.5rem;
-  --border-radius-sm: 0.625rem;
+  --border-radius-xs: 8px;
+  --border-radius-sm: 10px;
   /* letter-spacing */
-  --letter-spacing-lg: 0.3125rem;
+  --letter-spacing-lg: 5px;
   /* margin */
-  --margin-xs: 0.75rem;
-  --margin-sm: 1rem;
-  --margin-md: 1.5rem;
+  --margin-xs: 12px;
+  --margin-sm: 16px;
+  --margin-md: 24px;
   /* gap */
-  --gap-xs: 0.75rem;
-  --gap-sm: 1.1875rem;
+  --gap-xs: 12px;
+  --gap-sm: 19px;
 }
 *,
 *::before,
@@ -111,6 +111,7 @@ main {
   color: var(--color-dark-grayish-blue);
   letter-spacing: var(--letter-spacing-lg);
   margin-bottom: var(--margin-xs);
+  text-transform: uppercase;
 }
 .card-title {
   color: var(--color-very-dark-blue);
@@ -137,7 +138,15 @@ main {
 }
 .regular-price {
   color: var(--color-dark-grayish-blue);
-  text-decoration: line-through;
+}
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 0.0625rem;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.0625rem;
 }
 .button:link,
 .button:visited {
@@ -167,26 +176,30 @@ footer {
 .attribution a {
   color: var(--color-dark-cyan);
 }
-@media screen and (min-width: 30.0625rem) and (max-width: 47.9375rem) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
   .card {
-    max-width: 37.5rem;
+    max-width: 600px;
     margin-inline: auto;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   main {
     min-height: 100vh;
     display: grid;
     place-content: center;
   }
   .card {
-    max-width: 37.5rem;
+    max-width: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
+  picture {
+    align-self: stretch;
+  }
   .card-img-top {
     border-top-right-radius: 0;
     border-bottom-left-radius: var(--border-radius-sm);
+    min-height: 100%;
   }
 }
